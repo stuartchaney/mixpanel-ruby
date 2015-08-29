@@ -40,6 +40,8 @@ module Mixpanel
 
     # Override #handle to customize error handling
     def handle(error)
+      puts error.inspect
+      Rails.logger.warn(error)
       false
     end
   end
